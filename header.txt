@@ -1,0 +1,48 @@
+import Link from 'next/link';
+import React, { useContext } from 'react';
+
+const categories = [
+    {
+        name: 'Insights',
+        slug: 'Insights'
+    },
+    {
+        name: 'Budget',
+        slug: 'budget'
+    },
+    {
+        name: 'Gaming',
+        slug: 'gaming'
+    },
+    {
+        name: 'Productivity',
+        slug: 'productivity'
+    },
+];
+
+const Header = () => {
+    return (
+        <div className='container mx-auto px-10 mb-8'>
+            <div className="border-b w-full inline-block py-7">
+                <div className="md:float-left block">
+                    <Link href="/">
+                        <span className="cursor-poiner font-semibold text-3xl uppercase font-signature text-black -tracking-tighter">
+                            ZenFrost
+                        </span>
+                    </Link>
+                </div>
+                <div className="hidden md:float-left md:contents">
+                    {categories.map((category) => (
+                        <Link key={category.slug} href={`/category/${category.slug}`}>
+                            <span className='md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer'>
+                                {category.name}
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Header

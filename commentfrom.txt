@@ -1,0 +1,46 @@
+<div className="p-5 pb-12">
+      <h3 className="text-xl mb-2 font-extrabold font-signature">Leave a Reply</h3>
+      <p className="text-sm text-black mb-4">Your email address will not be published. Required fields are marked <span className='text-red-500'>*</span></p>
+
+      <div className="grid grid-cols-1 gap-4 mb-3">
+        <label htmlFor="comment" className="capitalize -mb-1">comment <span className='text-red-500'>*</span></label>
+        <textarea className="p-2 outline outline-1 outline-gray-300 bg-transparent text-sm h-36" name='comment'/>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 mb-3">
+            <label htmlFor="comment" className="capitalize -mb-1">Name <span className='text-red-500'>*</span></label>
+            <input type="text" className="p-2 outline outline-1 outline-gray-300 bg-transparent text-sm " name='name'/>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 mb-3">
+            <label htmlFor="comment" className="capitalize -mb-1">Email <span className='text-red-500'>*</span></label>
+            <input type="email" className="p-2 outline outline-1 outline-gray-300 bg-transparent text-sm " name='comment' />
+        </div>
+      </div>
+
+      {/* <div className="grid grid-cols-1 gap-4 mb-3">
+          <label htmlFor="comment" className="capitalize -mb-1">Website</label>
+          <input type="text" ref={websiteEl} className="p-2 outline outline-1 outline-gray-300 bg-transparent text-sm " name='website'/>
+      </div> */}
+
+      {/* CheckBox For Saving The Data For Commment */}
+      <div className="grid grid-cols-1 gap-4 mb-3 mt-3 capitalize">
+        <div>
+        <input type="checkbox" id="storeData" name="storeData" value="true" />
+          <label htmlFor="storeData" className='cursor-pointer text-ligthblack-0 ml-2'>save my details for next time</label>
+        </div>
+      </div>
+
+      { error && <p className="text-xs text-red-500">Please fill the required fields.</p> }
+
+      <div className="mt-5">
+      <button 
+      type="button" 
+      onClick={handlePostSubmission} 
+      className="bg-ligthblack-0 text-white hover:bg-black transition ease-in duration-500 text-lg px-7 py-3 cursor-pointer">
+          Post Comment
+        </button>
+        {showSuccessMessage && <span className="text-xl float-right font-semibold text-ligthblack-0 font-signature">Comment Submitted</span>}
+      </div>
+    </div>
