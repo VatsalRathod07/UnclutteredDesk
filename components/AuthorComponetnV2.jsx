@@ -1,3 +1,6 @@
+// This is an Author Component in Diffent Style.
+
+
 import React from 'react';
 import Image from 'next/image';
 
