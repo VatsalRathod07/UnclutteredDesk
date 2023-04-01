@@ -16,7 +16,7 @@ const PostWidget = ({ categories, slug }) => {
         .then((result) => setRelatedPosts(result))
     }
   }, [slug])
-  console.log(relatedPosts);
+  // console.log(relatedPosts);
 
   return (
     <div className='bg-darkwhite-0 bg-opacity-40 rounded-lg p-8 mb-8'>
@@ -35,7 +35,7 @@ const PostWidget = ({ categories, slug }) => {
             />
           </div>
           <div className="flex-grow ml-4">
-            <Link href={`/post/${post.slug}`} className="text-ligthblack-0 text-base font-normal">
+            <Link href={`/post/${post.slug}`} className="text-ligthblack-0 hover:text-black text-sm font-medium">
               {post.title}
             </Link>
           </div>

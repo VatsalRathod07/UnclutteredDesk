@@ -23,7 +23,7 @@ const PostDetail = ({ post }) => {
     
         switch (type) {
           case 'heading-three':
-            return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+            return <h3 key={index} className="text-xl font-semibold  mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
           case 'paragraph':
             return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
           case 'heading-four':
@@ -45,7 +45,7 @@ const PostDetail = ({ post }) => {
 
     return (
       <div className="rounded-md lg:p-8 pb-12 mb-8">
-        <h1 className="text-black mb-8 mt-3 text-4xl text-start font-black">{post.title}</h1>
+        <h1 className="text-black mb-8 mt-3 text-4xl tracking-wide text-start font-black">{post.title}</h1>
           {/* Author Details */}
           <div className="flex mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
                     <img
