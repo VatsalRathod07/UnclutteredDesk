@@ -10,7 +10,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" /> */}
+          <title>ZenFrost - Blog's</title>
+          <link rel="icon" href="../favicon.svg" />
         </Head>
         <body>
           <Main />
