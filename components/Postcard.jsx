@@ -3,6 +3,7 @@ import moment, { months } from "moment";
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
+
   return (
     <div className="bg-darkwhite-0 bg-opacity-50 rounded-md p-0 max-w-screen-mobile lg:p-8 pb-12 mb-8">
        <Link href={`/post/${post.slug}`}>

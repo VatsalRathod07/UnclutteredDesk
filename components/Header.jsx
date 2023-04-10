@@ -22,7 +22,7 @@ const Header = () => {
         <div className="border-b w-full inline-block border-gray-200 py-7 ">
           <div className="md:float-left block">
             <Link href="/">
-              <span className="uppercase cursor-pointer font-bold font-signature -tracking-tight text-3xl text-black">
+              <span className="uppercase cursor-pointer font-extrabold font-signature -tracking-tight text-3xl text-black">
                 ZenForst
                 {/* <span className='text-xs font'>Blog's</span> */}
               </span>

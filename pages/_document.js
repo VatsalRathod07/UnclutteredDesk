@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <title>ZenFrost - Blog's</title>
-          <link rel="icon" href="../favicon.svg" />
+          <link rel="icon" href="../fav.svg" />
         </Head>
         <body>
           <Main />
