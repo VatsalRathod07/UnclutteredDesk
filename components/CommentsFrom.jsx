@@ -48,7 +48,7 @@ const CommentsFrom = ({ slug }) => {
 
         setTimeout(() => {
           setShowSuccessMessage(false);
-        }, 3000);
+        }, 5000);
       })
   }
 
@@ -83,7 +83,7 @@ const CommentsFrom = ({ slug }) => {
         </div>
 
         {error && <p className="text-xs text-red-500">Please fill the required fields.</p>}
-        {showSuccessMessage && <span className="text-xs font-semibold text-ligthblack-0 font-signature">Comment Submitted For Review</span>}
+        {showSuccessMessage && <span className="text-sm font-bold text-ligthblack-0 font-signature">Your comment has been submmited !<br /><span className="text-xs font-medium">once it has been approved, it will appear below</span></span>}
         <div className="mt-5">
           <button 
             type='button' 

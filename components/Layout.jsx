@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from './'
+import NewsLetter from './NewsLetter'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
@@ -7,7 +8,8 @@ const Layout = ({ children }) => {
     <>
         <Header/>
         {children}
-        {/* <Footer/> */}
+        <NewsLetter/>
+        <Footer/>
     </>
   )
 }
