@@ -42,6 +42,25 @@ body {
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
 
+.background {
+  background-image: url("https://cdn.shopify.com/s/files/1/0633/7613/0300/files/Banner.LB.view1.big_mat_cb1b6b70-c401-4d38-a61c-e55dc695cbba.jpg?v=1671724110&width=3774");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+
+  backdrop-filter: blur(1px);
+}
+
+
 .adjacent-post{
   & .arrow-btn{
     transition: width 300ms ease;
