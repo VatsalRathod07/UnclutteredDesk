@@ -25,12 +25,11 @@ const NewsLetter = () => {
     }
 
     const newLetterObj = { email };
-
-    if (storeData) {
-      window.localStorage.setItem('email', email);
-    } else {
-      window.localStorage.removeItem('email', email);
-    }
+    // if (storeData) {
+    //   window.localStorage.setItem('email', email);
+    // } else {
+    //   window.localStorage.removeItem('email', email);
+    // }
 
     submitNewsLetter(newLetterObj)
       .then((res) => {
@@ -49,11 +48,16 @@ const NewsLetter = () => {
           <h2 className='text-4xl font-extrabold mb-6 md:mb-0'>Subscribe to Our Newsletter</h2>
           <p className='text-sm font-medium mb-6 md:mb-0'>Get the latest news and updates delivered straight to your inbox.</p>
           <form className='flex flex-col md:flex-row items-center'>
-            <input type='email' ref={newsletteremailEl} placeholder='Enter your email' className='py-2 px-4 focus:outline-none mb-4 md:mb-0 md:mr-4' />
-            <button type='submit' onSubmit={handleNewsLetterEmailSubmission} className='bg-ligthblack-0 text-white py-2 px-4'>Subscribe</button>
+            <input type='email' ref={newsletteremailEl} placeholder='Enter your email' className='py-2 px-4 w-72 focus:outline-none mb-4 md:mb-0 md:mr-4' />
+            <button 
+            type='button' 
+            onClick={handleNewsLetterEmailSubmission}
+            className="bg-ligthblack-0 text-white hover:bg-black border-none outline-none transition ease-in duration-500 px-10 py-2 cursor-pointer">
+            Subscribe
+            </button>
           </form>
           {error && <p className="text-xs text-red-500">Please enter valid email</p>}
-          {showSuccessMessage && <span className='font-signature text-sm font-semibold text-ligthblack-0 p-1'>Thank you for Subscribe</span>}
+          {showSuccessMessage && <span className='font-signature text-sm font-semibold text-ligthblack-0 p-1'>you're Subscribed</span>}
         </div>
       </div>
     </div>

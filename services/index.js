@@ -146,7 +146,7 @@ export const submitComment = async (obj) =>{
 }
 
 export const submitNewsLetter = async (obj) =>{
-  const result = await fetch('/api/comments', {
+  const result = await fetch('/api/newsletter', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -156,6 +156,21 @@ export const submitNewsLetter = async (obj) =>{
 
   return result.json();
 }
+
+export const getNewsLetters = async () => {
+  const query = gql`
+  query GetNewsletter{
+    newsletters{
+      email
+    }
+  }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.newsLetters;
+};
+
 
 export const getComments = async (slug) => {
   const query = gql`
