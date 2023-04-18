@@ -43,7 +43,9 @@ body {
 }
 
 .background {
-  background-image: url("https://cdn.shopify.com/s/files/1/0633/7613/0300/files/Banner.LB.view1.big_mat_cb1b6b70-c401-4d38-a61c-e55dc695cbba.jpg?v=1671724110&width=3774");
+  // background-image: url("https://cdn.shopify.com/s/files/1/0633/7613/0300/files/Banner.LB.view1.big_mat_cb1b6b70-c401-4d38-a61c-e55dc695cbba.jpg?v=1671724110&width=3774");
+  // background-image: url("https://pbs.twimg.com/media/DQjWk6UUIAAGQdW.jpg:large");
+  background-image: url("https://i.ytimg.com/vi/BAdsEZMODmA/maxresdefault.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -51,44 +53,9 @@ body {
 
 .card {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.522);
-
-  backdrop-filter: blur(.2px);
-}
-
-
-.adjacent-post{
-  & .arrow-btn{
-    transition: width 300ms ease;
-    width: 50px;
-  }
-  &:hover{
-    & .arrow-btn{
-      width: 60px;
-    }
-  }
-}
-
-.react-multi-carousel-list {
-  & .arrow-btn{
-    transition: width 300ms ease;
-    width: 50px;
-    &:hover{
-      width: 60px;
-    }
-  }
-  
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  justify-content: center;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(0.2px);
+  backdrop-filter: blur(0px);
 }

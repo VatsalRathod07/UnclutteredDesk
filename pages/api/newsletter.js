@@ -24,7 +24,6 @@ export default async function newsletter(req, res) {
   `;
   
   try {
-    console.log('hellow')
     const result = await graphQLClient.request(query, req.body)
     return res.status(200).send(result);
   } catch (error) {
