@@ -20,6 +20,7 @@
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.2",
     "react-parser": "^1.0.0",
+    "react-router-dom": "^6.10.0",
     "sass": "^1.60.0"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ const Header = () => {
         const sortedCategories = newCategories.sort(
           (a, b) =>
             ["", "", "", ""].indexOf(a.name) -
-            ["Productivity", "Gaming", "Budget", "Insights"].indexOf(b.name)
+            ["Productivity", "Gaming", "Minimal", "Insights"].indexOf(b.name)
         );
         setCategories(sortedCategories);
       });
@@ -19,19 +19,15 @@ const Header = () => {
   
     return (
       <div className="container mx-auto px-10 mb-8 ">
-        <div className="border-b w-full inline-block border-gray-200 py-7 ">
-          <div className="md:float-left block">
-            <Link href="/">
-              <span className="uppercase cursor-pointer font-extrabold font-signature -tracking-tight text-3xl text-black">
-                ZenForst
-                {/* <span className='text-xs font'>Blog's</span> */}
-              </span>
-            </Link>
+        <div className="w-full inline-block py-7 ">
+          <div className="md:float-left block" href="/">
+              <span className="text-2xl font-signature font-bold tracking-wider cursor-pointer text-black">UnclutteredDesk</span>
+              <p className='sub font-signature font-medium'>Where Less Is More</p>
           </div>
-          <div className="hidden md:float-left md:contents">
+          <div className="hidden md:float-left md:contents uppercase">
             {categories.map((category) => (
               <Link key={category.slug} href={`/category/${category.slug}`}>
-                <span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer">
+                <span className="md:float-right mt-2 align-middle text-black ml-4 font-medium cursor-pointer">
                   {category.name}
                 </span>
               </Link>

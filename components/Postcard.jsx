@@ -1,25 +1,26 @@
 import React from "react";
 import moment, { months } from "moment";
 import Link from "next/link";
+import { slice } from "lodash";
 
 const PostCard = ({ post }) => {
 
   return (
-    <div className="bg-darkwhite-0 bg-opacity-50 rounded-md p-0 max-w-screen-mobile lg:p-8 pb-12 mb-8">
-       <Link href={`/post/${post.slug}`}>
+    <div className="bg-darkwhite-0 bg-opacity-40 rounded-md p-0 max-w-screen-mobile lg:p-8 pb-12 mb-8">
+       {/* <Link href={`/post/${post.slug}`}> */}
       <div className="relative overflow-hidden shadow-sm pb-80 mb-6">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" 
+          className="featured-img object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg hover:scale-105 transition ease-in " 
         />
       </div>
-      <h2 className="transition duration-200 text-center mb-8 cursor-pointer text-ligthblack-0 hover:text-black text-3xl font-extrabold">
+      <h2 className="transition duration-200 text-center mb-4 cursor-pointer text-ligthblack-0 hover:text-black text-2xl font-bold">
         {/* <Link href={`/post/${post.slug}`}> */}
           {post.title}
         {/* </Link> */}
       </h2>
-      <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
+      {/* <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
       <div className="flex justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
           <img 
             src={post.author.photo.url} 
@@ -35,22 +36,35 @@ const PostCard = ({ post }) => {
         </p>
           </div>
         </div> 
-      </div>
-      <p className="text-center text-base text-ligthblack-0 font-normal px-4 lg:px-20">
-        {post.excerpt}
-      </p>
+      </div> */}
+      <p className="text-ligthblack-0 text-base text-center">{post.excerpt}</p>
 
-      {/* <div className="text-center">
+
+      <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <--- Read More Button ---> 
-          <span className="transition duration-200 transform hover:translate-y-1 inline-block bg-ligthblack-0 text-white text-lg rounded-md font-semibold mt-3 px-7 py-2">
-            Read More 
+          <span className="view-btn inline-block bg-black text-white text-lg rounded-sm mt-4 px-6 py-1.5">
+          View Guide
           </span>
         </Link>
-      </div> */} 
-      
-      </Link>
+      </div>  
+
+      {/* </Link> */}
     </div>
+
+    // <div className="container mx-auto px-10">
+    //   <Link href={`/post/${post.slug}`}>
+    //     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-7">
+    //         <div key={post.id} className="rounded-lg shadow-sm overflow-hidden">
+    //           <img src={post.featuredImage.url} alt={post.title} className=" cursor-pointer" />
+    //           <div className="p-4">
+    //           <p className="text-2xl font-bold mb-2">{post.title}</p>
+    //           <p className="text-ligthblack-0 text-base">{post.excerpt.slice(0, 100)}...</p>
+    //         </div>
+    //         </div>
+    //     </div>
+    //   </Link>
+    // </div>
+
   )
 };
 

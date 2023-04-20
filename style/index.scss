@@ -59,3 +59,25 @@ body {
   -webkit-backdrop-filter: blur(0.2px);
   backdrop-filter: blur(0px);
 }
+
+.view-btn:hover {
+  transition: .5s;
+  background: transparent;
+  outline: 1px solid black;
+  color: black;
+}
+
+.featured-img{
+  transition: ease-in;
+  transition-duration: 800ms;
+}
+
+.sub {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .sub {
+    font-size: 16px;
+  }
+}
