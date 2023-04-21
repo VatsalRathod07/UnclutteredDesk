@@ -4,12 +4,8 @@ const NotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="max-w-lg mx-auto flex-grow flex flex-col items-center justify-center">
-        <img src="https://cdn.dribbble.com/users/46355/screenshots/16843933/media/4cb734dfc26ce2030c375ebf004e5e9c.png?compress=1&resize=1000x750&vertical=top" alt="404 not found" className="w-full md:max-w-2xl" />
-        <p className='mb-1 mt-2 font-medium tracking-new font-mono'>Opps! something went wrong</p>
         <Link href="/">
-          <p className="text-ligthblack-0 font-signature capitalize tracking-wide font-bold py-3 px-6 rounded-full">
-            Go back home
-          </p>
+          <img src="https://cdn.dribbble.com/users/1663650/screenshots/14443731/media/5418c023f1c6910c38154892854bea68.gif" alt="404 not found" className="page-not-found w-full object-contain md:w-auto md:max-w-2xl" />
         </Link>
       </div>
     </div>

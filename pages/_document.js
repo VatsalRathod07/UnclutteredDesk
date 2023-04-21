@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>UnclutteredDesk - Where Less Is More</title>
+          <title>UnclutteredDesk - Less clutter, more focus</title>
           <link rel="icon" href="../FAV.svg" />
         </Head>
         <body>

@@ -36,7 +36,7 @@ const PostWidget = ({ categories, slug }) => {
           </div>
           <div className="flex-grow ml-4">
             <Link href={`/post/${post.slug}`} className="text-ligthblack-0 hover:text-black text-sm font-medium">
-              {post.title}
+              {post.title.slice(0, 50)}...
             </Link>
           </div>
         </div>
