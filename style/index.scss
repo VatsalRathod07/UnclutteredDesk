@@ -85,4 +85,15 @@ body {
     width: 100vw;
     height: max-content;
   }
+
+  .post-title {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+
+  .post-excerpt {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

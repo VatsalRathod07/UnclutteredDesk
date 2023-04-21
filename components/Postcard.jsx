@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
           className="featured-img object-fit absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg hover:scale-105 transition ease-in " 
         />
       </div>
-      <h2 className="transition duration-200 text-center mb-4 cursor-pointer text-ligthblack-0 hover:text-black text-2xl font-bold">
+      <h2 className="transition duration-200 text-center mb-4 cursor-pointer text-ligthblack-0 hover:text-black text-2xl font-bold post-title">
         {/* <Link href={`/post/${post.slug}`}> */}
           {post.title}
         {/* </Link> */}
@@ -37,7 +37,7 @@ const PostCard = ({ post }) => {
           </div>
         </div> 
       </div> */}
-      <p className="text-ligthblack-0 text-base text-center">{post.excerpt}</p>
+      <p className="text-ligthblack-0 text-base text-center post-excerpt">{post.excerpt}</p>
 
 
       <div className="text-center">
