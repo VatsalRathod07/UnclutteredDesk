@@ -57,7 +57,7 @@ const NewsLetter = () => {
             </button>
           </form>
           {error && <p className="text-xs text-red-500">Please enter valid email</p>}
-          {showSuccessMessage && <span className='font-signature text-sm font-semibold text-ligthblack-0 p-1'>you're Subscribed</span>}
+          {showSuccessMessage && <span className='font-signature text-sm font-semibold text-darkwhite-0 p-1'>you're Subscribed</span>}
         </div>
       </div>
     </div>
