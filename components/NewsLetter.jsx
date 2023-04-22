@@ -42,8 +42,8 @@ const NewsLetter = () => {
   }
 
   return (
-    <div className='background font-signature capitalize container mx-auto'>
-      <div className='container mx-auto px-4 py-12 md:py-24 card'>
+    <div className='background font-signature capitalize mx-auto'>
+      <div className='mx-auto px-4 py-12 md:py-24 card'>
         <div className='flex flex-col md:flex-col text-center gap-3 items-center justify-center md:justify-between'>
           <h2 className='text-white text-4xl font-extrabold mb-6 md:mb-0'>Subscribe to Our Newsletter</h2>
           <p className='text-white text-sm font-medium mb-6 md:mb-0'>Get the latest news and updates delivered straight to your inbox.</p>
