@@ -10,7 +10,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <title>UnclutteredDesk - Less clutter, more focus</title>
-          <link rel="icon" href="../FAV.svg" />
+          <link rel="icon" href="../fav.svg" />
         </Head>
         <body>
           <Main />
