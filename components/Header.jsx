@@ -20,7 +20,7 @@ const Header = () => {
     return (
       <div className="container mx-auto px-10 mb-8 ">
         <div className="w-full inline-block py-7 ">
-          <Link className="md:float-left block" href="nom/">
+          <Link className="md:float-left block" href="/">
               <span className="text-2xl font-signature font-bold tracking-wider cursor-pointer text-ligthblack-0">UnclutteredDesk</span>
               <p className='sub font-signature font-medium capitalize text-ligthblack-0'>Less clutter, more focus</p>
           </Link>

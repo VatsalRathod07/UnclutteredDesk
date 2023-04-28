@@ -25,11 +25,6 @@ const NewsLetter = () => {
     }
 
     const newLetterObj = { email };
-    // if (storeData) {
-    //   window.localStorage.setItem('email', email);
-    // } else {
-    //   window.localStorage.removeItem('email', email);
-    // }
 
     submitNewsLetter(newLetterObj)
       .then((res) => {
