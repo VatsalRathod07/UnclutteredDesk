@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         darkwhite: ["#f1f1f1"],
         ligthblack: ["#353535"],
+        cyneblue: ["#26a7de"],
       },
       letterSpacing: {
         new: "4px",

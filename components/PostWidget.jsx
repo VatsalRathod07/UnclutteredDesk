@@ -4,35 +4,45 @@ import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services';
 
 const PostWidget = ({ categories, slug }) => {
-
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (slug) {
       getSimilarPosts(categories, slug)
-        .then((result) => setRelatedPosts(result))
+        .then((result) => setRelatedPosts(result));
     } else {
       getRecentPosts()
-        .then((result) => setRelatedPosts(result))
+        .then((result) => setRelatedPosts(result));
     }
-  }, [slug])
-  // console.log(relatedPosts);
+  }, [slug]);
+
+  const isNewPost = (post) => {
+    const postDate = moment(post.publishedAt);
+    const currentDate = moment();
+    const daysSincePublication = currentDate.diff(postDate, 'days');
+    return daysSincePublication <= 3; // Consider posts published within the last 3 days as new
+  };
 
   return (
-    <div className='bg-darkwhite-0 bg-opacity-30 rounded-lg p-8 mb-8'>
-      <h3 className="text-base mb-8 font-semibold border-b  pb-4">
-        {slug ? 'Related Posts' : "Recent Posts"}
+    <div className="bg-darkwhite-0 bg-opacity-30 rounded-lg p-8 mb-8">
+      <h3 className="text-base mb-8 font-semibold border-b pb-4">
+        {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
       {relatedPosts.map((post) => (
         <div key={post.title} className="flex items-center w-full mb-4">
-          <div className="w-16 flex-none">
+          <div className="w-16 flex-none relative">
             <img
               src={post.featuredImage.url}
               alt={post.title}
               height="60px"
-              width="60px" 
+              width="60px"
               className="align-middle rounded-sm"
             />
+            {isNewPost(post) && (
+              <div className="absolute top-0 right-0 -mt-1 -mr-1 bg-ligthblack-0 text-white font-signature text-xs font-normal px-2 py-1 rounded-full">
+                New
+              </div>
+            )}
           </div>
           <div className="flex-grow ml-4">
             <Link href={`/post/${post.slug}`} className="text-ligthblack-0 hover:text-black text-sm font-medium">
@@ -42,7 +52,7 @@ const PostWidget = ({ categories, slug }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default PostWidget
+export default PostWidget;

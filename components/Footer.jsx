@@ -23,7 +23,7 @@ function Footer() {
               <Link href="https://www.instagram.com/uncluttereddesk" className="instagram"> <FaInstagram size={25} /> </Link>
               </li>
               <li className="mx-3">
-              <Link href="https://twitter.com/DeskUncluttered" className="text-ligthblack-0 text-opacity-100 hover:text-blue-700"> <FaTwitter size={25} /> </Link>
+              <Link href="https://twitter.com/DeskUncluttered" className="text-ligthblack-0 text-opacity-100 hover:text-cyneblue-0"> <FaTwitter size={25} /> </Link>
               </li>
             </ul>
           </div>
