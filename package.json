@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
     "html": "^1.0.0",
