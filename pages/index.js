@@ -14,7 +14,7 @@ export default function Home({ posts }) {
             ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-[13.59rem]">
+          <div className="lg:sticky relative top-2">
             <PostWidget/>
             <Categories/>
           </div>
