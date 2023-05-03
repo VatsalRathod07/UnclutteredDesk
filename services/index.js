@@ -4,36 +4,40 @@ const graphqlAPI = "https://api-ap-south-1.hygraph.com/v2/clfm2rma40rtl01t5ftgga
 
 
 export const getPosts = async () => {
-  
+
   const query = gql`
-    query MyQuery {
-      postsConnection {
-        edges {
-          cursor
-          node {
-            author {
-              bio
-              name
-              id
-              photo {
-                url
-              }
-            }
-            createdAt
-            slug
-            title
-            excerpt
-            featuredImage {
+  query MyQuery {
+    postsConnection {
+      edges {
+        node {
+          author {
+            bio
+            name
+            id
+            photo {
               url
             }
-            categories {
-              name
-              slug
-            }
+          }
+          createdAt
+          slug
+          title
+          excerpt
+          featuredImage {
+            url
           }
         }
       }
     }
+    categories {
+      name
+      slug
+    }
+    category2S {
+      name
+      slug
+    }
+  }
+  
   `;
 
   const result = await request(graphqlAPI, query);
@@ -43,7 +47,7 @@ export const getPosts = async () => {
 
 export const getCategories = async () => {
   const query = gql`
-    query GetGategories {
+    query GetCategories {
         categories {
           name
           slug
@@ -55,6 +59,21 @@ export const getCategories = async () => {
 
   return result.categories;
 };
+
+// export const getCategories2 = async () => {
+//   const query = gql`
+//     query GetCategories2 {
+//       category2S {
+//         name
+//         slug
+//       }
+//     }
+//   `;
+
+//   const result = await request(graphqlAPI, query);
+
+//   return result.category2S; // Corrected property name
+// };
 
 export const getPostDetails = async (slug) => {
   const query = gql`
@@ -133,7 +152,7 @@ export const getRecentPosts = async () => {
   return result.posts;
 };
 
-export const submitComment = async (obj) =>{
+export const submitComment = async (obj) => {
   const result = await fetch('/api/comments', {
     method: 'POST',
     headers: {
@@ -145,7 +164,7 @@ export const submitComment = async (obj) =>{
   return result.json();
 }
 
-export const submitNewsLetter = async (obj) =>{
+export const submitNewsLetter = async (obj) => {
   const result = await fetch('/api/newsletter', {
     method: 'POST',
     headers: {
@@ -224,3 +243,40 @@ export const getCategoryPost = async (slug) => {
 
   return result.postsConnection.edges;
 };
+
+// export const getCategory2Post = async (slug) => {
+//   const query = gql`
+//     query GetCategory2Post($slug: String!) {
+//       postsConnection(where: {category2S_some: {slug: $slug}}) {
+//         edges {
+//           cursor
+//           node {
+//             author {
+//               bio
+//               name
+//               id
+//               photo {
+//                 url
+//               }
+//             }
+//             createdAt
+//             slug
+//             title
+//             excerpt
+//             featuredImage {
+//               url
+//             }
+//             category2S {
+//               name
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `;
+
+//   const result = await request(graphqlAPI, query, { slug });
+
+//   return result.postsConnection.edges;
+// };

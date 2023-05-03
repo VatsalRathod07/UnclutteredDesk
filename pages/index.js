@@ -2,6 +2,7 @@ import NewsLetter from "@/components/NewsLetter";
 import { PostCard, Categories, PostWidget } from "../components";
 import { getPosts } from "../services";
 import MonitorGrid from "@/components/MonitorGrid";
+// import Tags from "@/components/Tags";
 
 export default function Home({ posts }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ posts }) {
           <div className="lg:sticky relative top-2">
             <PostWidget/>
             <Categories/>
+            {/* <Tags/> */}
           </div>
         </div>
     </div>

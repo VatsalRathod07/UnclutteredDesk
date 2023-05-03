@@ -1,7 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { getPosts, getPostDetails } from '../../services';
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsFrom, Loader } from '../../components';
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsFrom, Loader, Tags } from '../../components';
+// import TagWidget from '@/components/Tags';
 
 const PostDetails = ({ post }) => {
 
@@ -25,6 +26,7 @@ const PostDetails = ({ post }) => {
             <div className="relative lg:sticky top-8">
             <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
             <Categories/>
+            {/* <Tags/> */}
             </div>
             </div>
         </div>
