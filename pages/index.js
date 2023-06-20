@@ -2,6 +2,7 @@ import NewsLetter from "@/components/NewsLetter";
 import { PostCard, Categories, PostWidget } from "../components";
 import { getPosts } from "../services";
 import MonitorGrid from "@/components/MonitorGrid";
+import ChatGPT from "@/components/ChatGPT";
 // import Tags from "@/components/Tags";
 
 export default function Home({ posts }) {
@@ -24,6 +25,7 @@ export default function Home({ posts }) {
     </div>
     </div>
     <MonitorGrid/>
+    {/* <ChatGPT/> */}
     <NewsLetter/>
     </>
   )

@@ -18,7 +18,7 @@ const PostWidget = ({ categories, slug }) => {
     const postDate = moment(post.publishedAt);
     const currentDate = moment();
     const daysSincePublication = currentDate.diff(postDate, 'days');
-    return daysSincePublication <= 3; // Consider posts published within the last 3 days as new
+    return daysSincePublication <= 3 && daysSincePublication >= 0; // Consider posts published within the last 3 days as new
   };
 
   const sortPosts = (posts) => {

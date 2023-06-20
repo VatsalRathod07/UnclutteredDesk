@@ -5,7 +5,7 @@ import { HiMail } from "react-icons/hi";
 
 function Footer() {
   return (
-    <footer className="bg-darkwhite-0 mx-auto">
+    <footer className="bg-darkwhite-0 mx-auto container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8 md:flex md:items-center md:justify-between border-b">
           <div className="flex justify-center md:order-2">
