@@ -48,7 +48,7 @@ const ChatGPT = () => {
   const [generatedText, setGeneratedText] = useState('');
 
   const generateText = async () => {
-    openai.api_key = "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";
+    // openai.api_key = "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";
 
     const response = await openai.completions.create({
       engine: 'text-davinci-002',
